@@ -35,7 +35,22 @@ class Ruta
             }
         }else{
             //controladores y metodos
-            echo "controlador";
+            $estado = false;
+            foreach ($this->_controladores as $ruta => $cont){
+                if (trim($ruta,"/") == $paths[0]){
+                    $estado = true;
+                    $controlador =$cont;
+                    $metodo = "";
+                    if (count($paths)>1){
+                        $metodo = $paths[1];
+                    }
+                    $this->getController($metodo,$controlador);
+                }
+
+            }
+            if ($estado == false){
+                die("error en la ruta");
+            }
         }
 
     }
