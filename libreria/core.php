@@ -9,5 +9,7 @@
 define("APP_PATH",RUTA_BASE."app/");
 define("VIEW_PATH",RUTA_BASE."view/");
 define("PATH",APP_PATH."rutas/");
+include "Vista.php";
 include "Ruta.php";
 include PATH."rutas.php";
+

@@ -1,5 +1,5 @@
 <?php
-
+use vista\Vista;
 /**
  * Created by PhpStorm.
  * User: conve
@@ -9,7 +9,7 @@
 class UsuarioController
 {
     public function index(){
-        echo "raiz del proyecto";
+        return Vista::crear("usuarios.index");
     }
 
     public function insertar(){
