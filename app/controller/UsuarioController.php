@@ -9,7 +9,21 @@ use vista\Vista;
 class UsuarioController
 {
     public function index(){
-        return Vista::crear("usuarios.index");
+        $usuarios = array(
+            1=>array(
+                "nombre"=>"Ivan",
+                "apelido"=>"Jaramillo"
+            ),
+            2=>array(
+                "nombre"=>"German",
+                "apelido"=>"GRitti"
+            ),
+            3=>array(
+                "nombre"=>"Davide",
+                "apelido"=>"piazza"
+            )
+        );
+        return Vista::crear("usuarios.index","usuarios",$usuarios);
     }
 
     public function insertar(){

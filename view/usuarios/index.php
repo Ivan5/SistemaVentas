@@ -5,6 +5,8 @@
  * Date: 06/12/2016
  * Time: 10:29 PM
  */
+
+ echo json_encode($usuarios);
 ?>
 <!doctype html>
 <html lang="en">
